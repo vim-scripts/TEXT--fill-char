@@ -1,0 +1,34 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=574
+
+Script for on-the-fly indenting of columns according
+to the previous or next line (it allows for instance to easily align
+'=' sign in a sequence of C initializations, and much more).
+
+EXAMPLE:
+
+line 1: background-color: _#eeeeee
+line 2: color:|
+
+Char | is cursor, char _ is space. 
+
+After call :FillUpSpace (you can map to TAB) is 
+situation this:
+
+line 1: background-color:_#eeeeee
+line 2: color:___________|
+
+Cursor is under #. It's all.
+
+You can use :FillUpPrevious for fill any char (by char 
+previous cursor) 
+
+EXAMPLE:
+
+line1: Chapter1 ...................... 7
+line2: Chapter2 .|
+
+After use :FillUpPrevious is situation this:
+
+line1: Chapter1 ...................... 7
+line2: Chapter2 ......................|
+
